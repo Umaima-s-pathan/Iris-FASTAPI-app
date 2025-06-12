@@ -1,0 +1,111 @@
+{
+  "info": {
+    "name": "FastAPI_Excel_Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "fapi-excel-test-001"
+  },
+  "item": [
+    {
+      "name": "GET /list_tables",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/list_tables",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["list_tables"]
+        }
+      }
+    },
+    {
+      "name": "GET /get_table_details - Initial Investment",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/get_table_details?table_name=Initial%20Investment",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["get_table_details"],
+          "query": [
+            {
+              "key": "table_name",
+              "value": "Initial Investment"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /get_table_details - Operating Expenses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/get_table_details?table_name=Operating%20Expenses",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["get_table_details"],
+          "query": [
+            {
+              "key": "table_name",
+              "value": "Operating Expenses"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /row_sum - Revenues from Operating Expenses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/row_sum?table_name=Operating%20Expenses&row_name=Revenues",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["row_sum"],
+          "query": [
+            {
+              "key": "table_name",
+              "value": "Operating Expenses"
+            },
+            {
+              "key": "row_name",
+              "value": "Revenues"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /row_sum - Tax Credit from Initial Investment",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/row_sum?table_name=Initial%20Investment&row_name=Tax%20Credit%20(if%20any%20)=",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["row_sum"],
+          "query": [
+            {
+              "key": "table_name",
+              "value": "Initial Investment"
+            },
+            {
+              "key": "row_name",
+              "value": "Tax Credit (if any )="
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
